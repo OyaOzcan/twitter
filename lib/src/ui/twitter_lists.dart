@@ -16,28 +16,9 @@ class _twitterListsState extends State<twitterLists> {
   Widget build(BuildContext context) {
     return DefaultTabController(
       initialIndex: 1,
-      length: 2,
-      child: Scaffold(
-        appBar: AppBar(
-          leading:const Icon(Icons.chevron_left),
-          title: const Text('Lists', 
-          style:TextStyle(
-          fontWeight: FontWeight.bold,
-         ),
-         ),
-          bottom: const TabBar(
-            tabs: <Widget>[
-              Tab(
-                text :('subscribted to'),
-              ),
-              Tab(
-                text :('member of'),
-              ),
-            ],
-          ),
-        ),
-          bottomNavigationBar:CompNavBar() ,
-          body: Center(
+        length: 2,  
+        child:
+        Center(
             child :const TabBarView(
               children: <Widget>[
                 Center(
@@ -49,8 +30,6 @@ class _twitterListsState extends State<twitterLists> {
           ],
           ),
         ),
-        floatingActionButton: CompFloatActBut(),
-        ),
-    );
+        );
   }
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:twitter/src/component/comp_navbar.dart';
 import 'package:twitter/src/component/comp_switch_button.dart';
 
 
@@ -12,20 +13,13 @@ class SettingScreen extends StatefulWidget {
 class _SettingScreenState extends State<SettingScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(
-          leading:const Icon(Icons.chevron_left),
-          title:  Text('Message Settings', 
-          style:TextStyle(
-          fontWeight: FontWeight.bold,
-         ),
-         ),
-        ),
-          body: Center(
+    return 
+      
+          Center(
             child :ListView(
             children: [
               ListTile(
-                leading: Column(
+                title: Column(
                   children: [
                     Text('Receive messages from anyone',
                     style:TextStyle(fontWeight: FontWeight.bold),
@@ -36,10 +30,10 @@ class _SettingScreenState extends State<SettingScreen> {
                     ),
                   ],
           ),
-          title : CompSwitch(),
+          trailing : CompSwitch(),
         ),
            ListTile(
-                leading: Column(
+                title: Column(
                   children: [
                     Text('Show Read Recipts', 
                      style:TextStyle(fontWeight: FontWeight.bold),
@@ -50,10 +44,10 @@ class _SettingScreenState extends State<SettingScreen> {
                     ),
                   ],
           ),
-          title : CompSwitch(),
+          trailing: CompSwitch(),
         ),
            ListTile(
-                leading: Column(
+                title: Column(
                   children: [
                     Text('Receive messages from anyone',
                      style:TextStyle(fontWeight: FontWeight.bold),
@@ -63,11 +57,10 @@ class _SettingScreenState extends State<SettingScreen> {
                     style: TextStyle(color: Colors.blue),),
                   ],
           ),
-          title : CompSwitch(),
+          trailing : CompSwitch(),
         )
       ],
     ),  
-        ),
-     );
+        );
   }
 }

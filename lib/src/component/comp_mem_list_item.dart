@@ -21,7 +21,7 @@ class _CompMemListItemState extends State<CompMemListItem> {
             ],
           ),
         
-          title: CircleAvatar(),
+          trailing: CircleAvatar(),
 
           // CircleAvatar(backgroundColor: Colors.yellow,);
         )

@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:twitter/src/ui/homescreen.dart';
+import 'package:twitter/src/ui/message_screen.dart';
 import 'package:twitter/src/ui/search_screen.dart';
 import 'package:twitter/src/ui/settings_screen.dart';
 import 'package:twitter/src/ui/twitter_lists.dart';
 
 void main() {
   runApp(const MyApp());
+  
 }
 
 class MyApp extends StatelessWidget {
@@ -21,10 +23,12 @@ class MyApp extends StatelessWidget {
         //colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: SearchScreen(),
-      //home: HomeScreen(),
+      //home: SearchScreen(),
+      home: const HomeScreen(),
       //home: SettingScreen(),
       //home: twitterLists(),
+      //home :MsgScreen(),
+
     );
   }
 }

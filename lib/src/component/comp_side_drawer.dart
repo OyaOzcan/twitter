@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:twitter/src/ui/settings_screen.dart';
 
 class CompDrawer extends StatefulWidget {
   const CompDrawer({super.key});
@@ -22,7 +23,7 @@ class _CompDrawerState extends State<CompDrawer> {
                   CircleAvatar(
                     radius: 32,
                     child: CircleAvatar(
-                    backgroundImage: AssetImage("assets/foto.jpeg"),
+                    backgroundColor: Colors.black,
                     radius: 30),
                   ),
                   Text(
@@ -64,7 +65,7 @@ class _CompDrawerState extends State<CompDrawer> {
                   Navigator.pop(context);
                 }),
               ListTile(
-                leading: Icon(Icons.flash_off_outlined),
+                leading: Icon(Icons.flash_on_outlined),
                 title: Text('Moments'),
                 onTap: () {
                   Navigator.pop(context);
@@ -72,7 +73,14 @@ class _CompDrawerState extends State<CompDrawer> {
                ListTile(
                 leading:  Text('Settings and Privacy'),
                 onTap: () {
-                  Navigator.pop(context);
+                    onTap: () {
+                    Navigator.pop(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => SettingScreen(),
+                    ),
+                  );
+                };
                 }),
                 ListTile(
                 leading:  Text('Help Center'),
