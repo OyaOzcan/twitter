@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:twitter/src/ui/homescreen.dart';
+import 'package:twitter/src/ui/loginscreen.dart';
 import 'package:twitter/src/ui/message_screen.dart';
 import 'package:twitter/src/ui/search_screen.dart';
 import 'package:twitter/src/ui/settings_screen.dart';
@@ -24,11 +25,11 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       //home: SearchScreen(),
-      home: const HomeScreen(),
+      //home: const HomeScreen(),
       //home: SettingScreen(),
       //home: twitterLists(),
       //home :MsgScreen(),
-
+      home: const LoginScreen(),
     );
   }
 }
